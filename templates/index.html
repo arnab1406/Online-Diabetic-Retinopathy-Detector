@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D-CNN Retina</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body >
+    
+    <div class="w3-card-4 card-wrapper ">
+            <header class="w3-container w3-red title">
+                <h1 >D-CNN Retina</h1>
+            </header>
+            <p style="text-align: center; font-size: small;">Please insert Retinal image here</p>
+            <div class="ape2je">
+                <input class="w3-input w3-border" id="image-selector" type = "file" value="Please insert image">
+                <button class="w3-btn w3-red" id="predict-button">Predict</button>
+            </div>
+            <p style = "font-weight: bold; text-align: center;">PREDICTIONS (Threshold : 0.5)</p>
+            <div class="w3-panel w3-card predict">
+
+                <p><b>Normal: </b><span id="normal-prediction"></span></p>
+                <p><b>Moderate: </b><span id="moderate-prediction"></span></p>
+                <p id='info-wrap'><b>Severe: </b><span id="severe-prediction"></span>                        
+                    
+                    <div class='help'>
+                            <img id = 'info' src='file:///C:/Users/91893/Desktop/Placement/dr.png'>
+                            
+                            <span class='helptip'>Click for info</span>
+                    </div>
+                    <div id = 'popupInfo' class = 'modal'>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h2 style="text-align: center;">Information</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p><b>Normal</b> - a normal condition of an eye.</p>
+                                <p><b>Mild</b> - The initial stage of DR. Micro aneurysms(small swelling) appear that may cause leak of fluid into the retina.</p>
+                                <p><b>Moderate</b> - The progressive stage that cause swell and distortion of blood vessels that are connected to retina(for blood and nourishment).</p>
+                                <p><b>Severe</b> - The severe condition of DR where many blood vessels blocked making less supply of blood to retina(new blood vessels appear).</p>
+                                <p><b>Proliferative</b> - The advanced stage of DR caused by blockage of tiny blood vessels(that grow inside). It damage the retina.</p>
+                            </div>
+                            <div class="modal-footer">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </p>
+                
+
+            </div>
+            
+
+            <img id="selected-image"/>
+            <p id='result'><b>RESULT: <span id="result-prediction"></span></b></p>
+            
+        
+            <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src ="./static/script.js"></script>
+            <footer class="w3-container w3-red" style="text-align: center;">
+    
+    </div>
+    
+
+
+</body>
+</html>
